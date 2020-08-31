@@ -7,18 +7,32 @@
         mc:Ignorable="d"
         Title="AIMODE" Height="450" Width="800">
     <Grid>
-        <Button Content="Pay Now" HorizontalAlignment="Left" Margin="281,332,0,0" VerticalAlignment="Top" Width="197" Height="66" FontSize="36"/>
-        <RichTextBox HorizontalAlignment="Left" Height="285" Margin="25,32,0,0" VerticalAlignment="Top" Width="398">
-            <FlowDocument/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <RichTextBox x:Name="rich" HorizontalAlignment="Left" Height="285" Margin="25,32,0,0" VerticalAlignment="Top" Width="398">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="AI INFORMATION"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="================="/>
+                </Paragraph>
+                <Paragraph>
+                    <Run/>
+                </Paragraph>
+            </FlowDocument>
         </RichTextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="584,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" FontSize="18"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="29" Margin="584,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" FontSize="18"/>
         <TextBlock HorizontalAlignment="Left" Margin="438,128,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="82" FontSize="18"/>
         <TextBlock HorizontalAlignment="Left" Margin="438,65,0,0" TextWrapping="Wrap" Text="Card Number" VerticalAlignment="Top" FontSize="18"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="584,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" FontSize="18"/>
-        <Button Content="ACTIVATE AI " HorizontalAlignment="Left" Margin="511,195,0,0" VerticalAlignment="Top" Width="203" Height="55" Click="Button_Click" FontSize="24"/>
+        <Button Content="ACTIVATE AI " HorizontalAlignment="Left" Margin="508,233,0,0" VerticalAlignment="Top" Width="203" Height="71" Click="Button_Click" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" TextWrapping="Wrap" Text="AI HISTORY" VerticalAlignment="Top"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="25,383,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button Content="Speak" HorizontalAlignment="Left" Margin="694,383,0,0" VerticalAlignment="Top" Width="75"/>
+        <PasswordBox x:Name="Passbox1" HorizontalAlignment="Left" Margin="584,128,0,0" VerticalAlignment="Top" Width="155" Height="29"/>
 
     </Grid>
 </Window>

@@ -20,15 +20,27 @@ namespace AI_Fridge
     /// <summary>
     /// Interaction logic for Get_Items.xaml
     /// </summary>
+    /// 
+    
     public partial class Get_Items : Window
     {
+
+        
         public Get_Items()
         {
             InitializeComponent();
         }
+
+     
+       
+
         SpeechRecognitionEngine spe = new SpeechRecognitionEngine();
         SpeechSynthesizer sps = new SpeechSynthesizer();
         
+       
+
+        
+
 
 
         private void btnspeak_Click(object sender, RoutedEventArgs e)
@@ -55,14 +67,15 @@ namespace AI_Fridge
         private void Recognizer(object sender, SpeechRecognizedEventArgs e)
         {
             string speech = e.Result.Text;
-            Main_Menu mm = new Main_Menu();
+         
 
             if (speech == "Go Back")
             {
+                Main_Menu g = new Main_Menu();
+                spe.RecognizeAsyncCancel();
                 this.Hide();
                 
-
-                mm.Show();
+                g.Show();
 
 
 
@@ -72,9 +85,11 @@ namespace AI_Fridge
 
         private void btnback_Click(object sender, RoutedEventArgs e)
         {
+
+            spe.RecognizeAsyncCancel();
+            Main_Menu g = new Main_Menu();
             this.Hide();
-            Main_Menu mm = new Main_Menu();
-            mm.Show();
+            g.Show();
         }
 
         private void RichTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -84,6 +99,17 @@ namespace AI_Fridge
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            DBHandler db = new DBHandler();
+            int chiq = Int32.Parse(textbox1.Text);
+            int beq = Int32.Parse(textbox2.Text);
+            int miq = Int32.Parse(textbox3.Text);
+            int cuq = Int32.Parse(textbox4.Text);
+            int caq = Int32.Parse(textbox5.Text);
+            int egq = Int32.Parse(textbox6.Text);
+
+            db.getAllquantity();
+
+            db.getitemscalculation(chiq, beq, miq, cuq, caq, egq,this);
 
         }
     }

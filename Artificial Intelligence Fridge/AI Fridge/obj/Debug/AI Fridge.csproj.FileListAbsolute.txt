@@ -30,3 +30,10 @@ C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\bin\Debug\Renci.SshNet.dll
 C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\bin\Debug\MySql.Data.xml
 C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\obj\Debug\AI Fridge.csproj.CopyComplete
+C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\obj\Debug\Payment.g.cs
+C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\obj\Debug\Payment.baml
+C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\bin\Debug\System.Resources.Extensions.dll
+C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\bin\Debug\System.Memory.dll
+C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jubair\Desktop\AI Fridge\AI Fridge\bin\Debug\System.Buffers.dll

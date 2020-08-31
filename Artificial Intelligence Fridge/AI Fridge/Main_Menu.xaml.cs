@@ -32,15 +32,17 @@ namespace AI_Fridge
         Show_Items si = new Show_Items();
         AIMODE ai = new AIMODE();
         InsertBalance ib = new InsertBalance();
+        
         public Main_Menu()
         {
 
             InitializeComponent();
+           
         }
 
-        
 
         
+
         private void Btnspeak(object sender, RoutedEventArgs e)
         {
             spe.SetInputToDefaultAudioDevice();
@@ -63,16 +65,51 @@ namespace AI_Fridge
 
             if (speech == "Get Items")
             {
+                spe.RecognizeAsyncCancel();
                 this.Hide();
                 g.Show();
 
+                
+
             }
+
+            if(speech =="Order Items")
+            {
+                spe.RecognizeAsyncCancel();
+                this.Hide();
+                or.Show();
+            }
+
+            if(speech == "Show Items")
+            {
+                spe.RecognizeAsyncCancel();
+                this.Hide();
+                si.Show();
+            }
+
+            if (speech == "AI MODE")
+            {
+                spe.RecognizeAsyncCancel();
+                this.Hide();
+                ai.Show();
+            }
+
+            if(speech == "Insert Balance")
+            {
+                spe.RecognizeAsyncCancel();
+                this.Hide();
+                ib.Show();
+            }
+                
+
+            
         }
 
        
 
         private void Button_Click_getitems(object sender, RoutedEventArgs e)
         {
+           
             this.Hide();
             g.Show();
         }

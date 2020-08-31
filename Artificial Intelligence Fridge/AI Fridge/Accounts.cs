@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace AI_Fridge
 {
-   public  class User
+    class Accounts
     {
-        public string Username;
-        public string pass;
-        public int phone;
+        public int CardId;
+        public int Pass;
+        public int Balance;
+
     }
 }

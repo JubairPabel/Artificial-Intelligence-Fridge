@@ -17,24 +17,23 @@ namespace AI_Fridge
 
         }
 
-        public string  DoThingFromDB()
+    /* public string  DoThingFromDB()
         {
             ArrayList listOfUsers = db.getAllUsers();
-            StringBuilder str = new StringBuilder();
+          
 
             for (int i = 0; i< listOfUsers.Count;i++)
             {
                 User us = (User)listOfUsers[i];
-                this.verify
+                this.verify(us.Username, us.pass);
 
             }
-        }
-
-        public int verify(string username , string id)
-        {
-
-        }
             
+        }
+        */
+
+       
+         
     }
 
 }

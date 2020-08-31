@@ -15,33 +15,28 @@ using System.Windows.Shapes;
 namespace AI_Fridge
 {
     /// <summary>
-    /// Interaction logic for AIMODE.xaml
+    /// Interaction logic for Payment.xaml
     /// </summary>
-    public partial class AIMODE : Window
+    public partial class Payment : Window
     {
-       
-        public AIMODE()
+        DBHandler dbh;
+        public Payment()
         {
             InitializeComponent();
         }
 
+        public Payment(DBHandler dbh)
+        {
+            InitializeComponent();
+            this.dbh = dbh;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DBHandler db = new DBHandler();
 
-
-
-            db.getAllquantity();
-
-            db.AIprocess(this);
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
+          
+            dbh.Payment(this);
+            dbh.orderprocess();
             this.Hide();
-            Main_Menu mm = new Main_Menu();
-            mm.Show();
-               
         }
     }
 }

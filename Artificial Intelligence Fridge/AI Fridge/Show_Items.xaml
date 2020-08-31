@@ -7,13 +7,17 @@
         mc:Ignorable="d"
         Title="Show_Items" Height="450" Width="800">
     <Grid>
-        <RichTextBox HorizontalAlignment="Left" Height="256" Margin="40,47,0,0" VerticalAlignment="Top" Width="702" FontFamily="BatmanForeverOutline">
-            <FlowDocument/>
-        </RichTextBox>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Button Content="Back" HorizontalAlignment="Left" Margin="23,377,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="Speak" HorizontalAlignment="Left" Margin="696,377,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Show Items!!" HorizontalAlignment="Left" Margin="275,331,0,0" VerticalAlignment="Top" Width="234" Height="66" FontSize="22"/>
-        <TextBlock HorizontalAlignment="Left" Margin="123,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="513" Height="32" FontSize="22"><Run Text="                             "/><Run FontFamily="Showcard Gothic" Text="AVAILABLE ITEMS"/></TextBlock>
+        <Button Content="Speak" HorizontalAlignment="Left" Margin="696,377,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <Button Content="Show Items!!" HorizontalAlignment="Left" Margin="275,331,0,0" VerticalAlignment="Top" Width="234" Height="66" FontSize="22" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="123,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="513" Height="32" FontSize="22"><Run Text="                             "/><Run Foreground="#FF2260B9" FontFamily="Showcard Gothic" Text="AVAILABLE ITEMS"/></TextBlock>
+        <DataGrid x:Name="Grid" HorizontalAlignment="Left" Height="279" Margin="23,47,0,0" VerticalAlignment="Top" Width="737"/>
 
     </Grid>
 </Window>

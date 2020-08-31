@@ -30,5 +30,17 @@ namespace AI_Fridge
             Main_Menu mm = new Main_Menu();
             mm.Show();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            DBHandler db = new DBHandler();
+            int pin = int.Parse(textbox1.Text);
+            int id = int.Parse(textbox2.Text);
+         
+
+            db.Insert(pin,id);
+
+
+        }
     }
 }

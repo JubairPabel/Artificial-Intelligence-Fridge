@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Speech.Recognition;
+using System.Speech.Synthesis;
+using System.IO;
 
 namespace AI_Fridge
 {
@@ -23,6 +26,8 @@ namespace AI_Fridge
         {
             InitializeComponent();
         }
+        SpeechRecognitionEngine spe = new SpeechRecognitionEngine();
+        SpeechSynthesizer sps = new SpeechSynthesizer();
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -31,5 +36,53 @@ namespace AI_Fridge
             mm.Show();
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            DBHandler db = new DBHandler();
+
+            db.Showitems(this);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                spe.SetInputToDefaultAudioDevice();
+                spe.LoadGrammarAsync(new Grammar(new GrammarBuilder(new Choices(File.ReadAllLines(@"TextFile1.txt")))));
+                spe.SpeechRecognized += Recognizer;
+                spe.SpeechDetected += un_Recognizer;
+                spe.RecognizeAsync(RecognizeMode.Multiple);
+            }
+
+            catch (Exception er)
+            {
+                MessageBox.Show("" + er);
+            }
+        }
+        private void un_Recognizer(object sender, SpeechDetectedEventArgs e)
+        {
+
+        }
+
+        private void Recognizer(object sender, SpeechRecognizedEventArgs e)
+        {
+            string speech = e.Result.Text;
+
+
+            if (speech == "Go Back")
+            {
+                Main_Menu g = new Main_Menu();
+                spe.RecognizeAsyncCancel();
+                this.Hide();
+
+                g.Show();
+
+
+
+
+            }
+        }
+
     }
 }

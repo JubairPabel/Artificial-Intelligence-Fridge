@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:AI_Fridge"
         mc:Ignorable="d"
         Title="Get_Items" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,0,2,-1">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Button x:Name="btnspeak" Content="Speak" HorizontalAlignment="Left" Margin="707,373,0,0" VerticalAlignment="Top" Width="75" Click="btnspeak_Click"/>
         <Button x:Name="btnback" Content="Back" HorizontalAlignment="Left" Margin="10,373,0,0" VerticalAlignment="Top" Width="75" Click="btnback_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="543,59,0,0" TextWrapping="Wrap" Text="Chicken" VerticalAlignment="Top"/>
@@ -15,15 +21,25 @@
         <TextBlock HorizontalAlignment="Left" Margin="543,202,0,0" TextWrapping="Wrap" Text="Cucumber" VerticalAlignment="Top" Width="66"/>
         <TextBlock HorizontalAlignment="Left" Margin="543,243,0,0" TextWrapping="Wrap" Text="Capsicum" VerticalAlignment="Top" Width="66"/>
         <TextBlock HorizontalAlignment="Left" Margin="545,286,0,0" TextWrapping="Wrap" Text="Egg" VerticalAlignment="Top"/>
-        <RichTextBox HorizontalAlignment="Left" Height="292" Margin="10,31,0,0" VerticalAlignment="Top" Width="473" TextChanged="RichTextBox_TextChanged">
-            <FlowDocument/>
+        <RichTextBox x:Name="RichText1" HorizontalAlignment="Left" Height="292" Margin="10,31,0,0" VerticalAlignment="Top" Width="473" TextChanged="RichTextBox_TextChanged">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="Recent Take Outs:"/>
+                </Paragraph>
+                <Paragraph>
+                    <Run Text="============="/>
+                </Paragraph>
+                <Paragraph>
+                    <Run/>
+                </Paragraph>
+            </FlowDocument>
         </RichTextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="613,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="613,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="613,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="614,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="614,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="614,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="23" Margin="613,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="23" Margin="613,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        <TextBox x:Name="textbox3" HorizontalAlignment="Left" Height="23" Margin="613,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        <TextBox x:Name="textbox4" HorizontalAlignment="Left" Height="23" Margin="614,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        <TextBox x:Name="textbox5" HorizontalAlignment="Left" Height="23" Margin="614,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
+        <TextBox x:Name="textbox6" HorizontalAlignment="Left" Height="23" Margin="614,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="0"/>
         <TextBlock HorizontalAlignment="Left" Margin="738,62,0,0" TextWrapping="Wrap" Text="Kg" VerticalAlignment="Top" Width="27"/>
         <TextBlock HorizontalAlignment="Left" Margin="738,106,0,0" TextWrapping="Wrap" Text="Kg" VerticalAlignment="Top" Width="27"/>
         <TextBlock HorizontalAlignment="Left" Margin="738,153,0,0" TextWrapping="Wrap" Text="Litre" VerticalAlignment="Top" Width="27"/>
@@ -32,5 +48,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="738,289,0,0" TextWrapping="Wrap" Text="Pc's" VerticalAlignment="Top" Width="27"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Items History" VerticalAlignment="Top"/>
         <Button Content="GET ITEMS!!" HorizontalAlignment="Left" Margin="283,341,0,0" VerticalAlignment="Top" Width="213" Height="45" Click="Button_Click" FontSize="22"/>
+        <Image Height="100" Margin="-199,223,891,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

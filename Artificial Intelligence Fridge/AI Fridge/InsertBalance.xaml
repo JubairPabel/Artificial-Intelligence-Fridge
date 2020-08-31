@@ -6,14 +6,18 @@
         xmlns:local="clr-namespace:AI_Fridge"
         mc:Ignorable="d"
         Title="InsertBalance" Height="450" Width="800">
-    <Grid>
-        <Button Content="CONFIRM" HorizontalAlignment="Left" Margin="306,306,0,0" VerticalAlignment="Top" Width="201" Height="48" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Left" Margin="181,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Text="Recharge Pin"/>
-        <TextBlock HorizontalAlignment="Left" Margin="181,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontSize="24" Text="Card Number"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="181,190,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Height="44" Margin="375,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
-        <TextBox HorizontalAlignment="Left" Height="43" Margin="375,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
-        <TextBox HorizontalAlignment="Left" Height="45" Margin="375,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
+    <Grid Margin="-1,0,1,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Content="CONFIRM" HorizontalAlignment="Left" Margin="285,286,0,0" VerticalAlignment="Top" Width="201" Height="48" FontSize="36" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="176,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Text="Recharge Pin"/>
+        <TextBlock HorizontalAlignment="Left" Margin="176,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run FontSize="24" Text="Card Number"/></TextBlock>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" Height="44" Margin="375,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Height="43" Margin="375,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="31,374,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
